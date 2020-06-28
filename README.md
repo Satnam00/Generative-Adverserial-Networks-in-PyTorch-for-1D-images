@@ -9,21 +9,22 @@ There are two neural networks: a Generator and a Discriminator. The generator ge
 
 <img width="555" alt="h" src="https://user-images.githubusercontent.com/39052765/85935861-bc6c8580-b912-11ea-8cf3-2d4a37733d15.png">
 
-Most of the code for this tutorial has been borrowed for this excellent repository of PyTorch tutorials: github.com/yunjey/pytorch-tutorial. Here's what we're going to do:
+Most of the code for this tutorial has been borrowed for this excellent repository of PyTorch tutorials: github.com/yunjey/pytorch-tutorial.
 
-Define the problem statement
-Load the data (with transforms and normalization)
-Denormalize for visual inspection of samples
-Define the Discriminator network
-Study the activation function: Leaky ReLU
-Define the Generator network
-Explain the output activation function: TanH
-Look at some sample outputs
-Define losses, optimizers and helper functions for training
-For discriminator
-For generator
-Train the model
-Save intermediate generated images to file
-Look at some outputs
-Save the models
-Commit to Jovian.ml
+## Here's what we're going to do:
+1. Define the problem statement
+2. Load the data (with transforms and normalization)
+3. Denormalize for visual inspection of samples
+4. Define the Discriminator network
+5. Study the activation function: Leaky ReLU
+6. Define the Generator network
+7. Explain the output activation function: TanH
+8. Look at some sample outputs
+9. Define losses, optimizers and helper functions for training
+10. For discriminator
+11. For generator
+12. Train the model
+13. Save intermediate generated images to file
+14. Look at some outputs
+15. Save the models
+16. Commit to Jovian.ml
