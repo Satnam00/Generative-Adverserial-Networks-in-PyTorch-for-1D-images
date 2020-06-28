@@ -36,6 +36,8 @@ The discriminator takes an image as input, and tries to classify it as "real" or
 We use the Leaky ReLU activation for the discriminator.
 
 
+![01](https://user-images.githubusercontent.com/39052765/85935947-ad3a0780-b913-11ea-906b-423632271a3d.png)
+
 Different from the regular ReLU function, Leaky ReLU allows the pass of a small gradient signal for negative values. As a result, it makes the gradients from the discriminator flows stronger into the generator. Instead of passing a gradient (slope) of 0 in the back-prop pass, it passes a small negative gradient. - Source
 
 Just like any other binary classification model, the output of the discriminator is a single number between 0 and 1, which can be interpreted as the probability of the input image being fake i.e. generated
