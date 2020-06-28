@@ -11,6 +11,10 @@ There are two neural networks: a Generator and a Discriminator. The generator ge
 
 Most of the code for this tutorial has been borrowed for this excellent repository of PyTorch tutorials: github.com/yunjey/pytorch-tutorial.
 
+## Dataset Used
+MNIST Dataset
+http://yann.lecun.com/exdb/mnist/
+
 ## Here's what we're going to do:
 1. Define the problem statement
 2. Load the data (with transforms and normalization)
