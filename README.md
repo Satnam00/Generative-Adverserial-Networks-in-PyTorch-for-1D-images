@@ -46,3 +46,18 @@ We use the Leaky ReLU activation for the discriminator.
 Different from the regular ReLU function, Leaky ReLU allows the pass of a small gradient signal for negative values. As a result, it makes the gradients from the discriminator flows stronger into the generator. Instead of passing a gradient (slope) of 0 in the back-prop pass, it passes a small negative gradient. - Source
 
 Just like any other binary classification model, the output of the discriminator is a single number between 0 and 1, which can be interpreted as the probability of the input image being fake i.e. generated
+
+## Here are the steps involved in training the discriminator.
+1.We expect the discriminator to output 1 if the image was picked from the real MNIST dataset, and 0 if it was generated.
+2.We first pass a batch of real images, and compute the loss, setting the target labels to 1.
+3.Then, we generate a batch of fake images using the generator, pass them into the discriminator, and compute the loss, setting the target labels to 0.
+4.Finally we add the two losses and use the overall loss to perform gradient descent to adjust the weights of the discriminator.
+5. It's important to note that we don't change the weights of the generator model while training the discriminator (d_optimizer only affects the D.parameters())
+
+## Generator Training
+Since the outputs of the generator are images, it's not obvious how we can train the generator. This is where we employ a rather elegant trick, which is to use the discriminator as a part of the loss function. 
+
+Here's how it works:
+1. We generate a batch of images using the generator, pass the into the discriminator.
+2. We calculate the loss by setting the target labels to 1 i.e. real. We do this because the generator's objective is to "fool" the discriminator.
+3. We use the loss to perform gradient descent i.e. change the weights of the generator, so it gets better at generating real-like images.
