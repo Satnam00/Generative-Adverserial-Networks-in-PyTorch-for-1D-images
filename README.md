@@ -15,6 +15,8 @@ Most of the code for this tutorial has been borrowed for this excellent reposito
 MNIST Dataset
 http://yann.lecun.com/exdb/mnist/
 
+![download](https://user-images.githubusercontent.com/39052765/85936255-70bbdb00-b916-11ea-8d1c-cf3b01f7e5f9.jpg)
+
 ## Here's what we're going to do:
 1. Define the problem statement
 2. Load the data (with transforms and normalization)
