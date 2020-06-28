@@ -32,6 +32,11 @@ Most of the code for this tutorial has been borrowed for this excellent reposito
 ## Discriminator Network
 The discriminator takes an image as input, and tries to classify it as "real" or "generated". In this sense, it's like any other neural network. While we can use a CNN for the discriminator, we'll use a simple feedforward network with 3 linear layers to keep things since. We'll treat each 28x28 image as a vector of size 784.
 
+## Discriminator Training
+Since the discriminator is a binary classification model, we can use the binary cross entropy loss function to quantify how well it is able to differentiate between real and generated images.
+
+![d](https://user-images.githubusercontent.com/39052765/85935983-115ccb80-b914-11ea-8b6d-334ccae3141b.jpg)
+
 ## Leaky ReLu activation function
 We use the Leaky ReLU activation for the discriminator.
 
