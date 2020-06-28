@@ -28,3 +28,14 @@ Most of the code for this tutorial has been borrowed for this excellent reposito
 14. Look at some outputs
 15. Save the models
 16. Commit to Jovian.ml
+
+## Discriminator Network
+The discriminator takes an image as input, and tries to classify it as "real" or "generated". In this sense, it's like any other neural network. While we can use a CNN for the discriminator, we'll use a simple feedforward network with 3 linear layers to keep things since. We'll treat each 28x28 image as a vector of size 784.
+
+## Leaky ReLu activation function
+We use the Leaky ReLU activation for the discriminator.
+
+
+Different from the regular ReLU function, Leaky ReLU allows the pass of a small gradient signal for negative values. As a result, it makes the gradients from the discriminator flows stronger into the generator. Instead of passing a gradient (slope) of 0 in the back-prop pass, it passes a small negative gradient. - Source
+
+Just like any other binary classification model, the output of the discriminator is a single number between 0 and 1, which can be interpreted as the probability of the input image being fake i.e. generated
